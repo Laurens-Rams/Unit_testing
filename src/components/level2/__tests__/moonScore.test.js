@@ -7,6 +7,21 @@ describe('getMoonScore', () => {
     expect(score).toBe('');
   });
 
+  it('should return 1 for score 20', () => {
+    const score = getMoonScore(20);
+    expect(score).toMatch(/^(🌕){1}$/);
+  });
+
+  it('should return 1.5 stars for score 30', () => {
+    const score = getMoonScore(30);
+    expect(score).toBe('🌕🌗');
+  });
+
+  it('should return 2 for score 40', () => {
+    const score = getMoonScore(40);
+    expect(score).toMatch(/^(🌕){2}$/);
+  });
+
   // TODO: Add missing test cases here
   // for ALL possible outputs of this helper function
   // Tip: don't repeat implementation details in the test

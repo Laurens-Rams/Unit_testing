@@ -2,11 +2,15 @@
 import MovieCard from './MovieCard.vue';
 import { ref } from 'vue';
 import dataService from './utils/dataService';
-
 const movies = dataService.getMovies();
 
-function setFavoriteMovie() {}
 const favoriteMovie = ref('');
+
+// TODO: finish this function to make the test pass!
+function setFavoriteMovie(favMovie) {
+  favoriteMovie.value = favMovie;
+}
+
 </script>
 <template>
   <div class="movie-list">
@@ -15,7 +19,7 @@ const favoriteMovie = ref('');
       :movie="movie"
       :key="movie.id"
       :favorite-movie="favoriteMovie"
-      @favorite-selected="setFavoriteMovie"
+      @favorite-selected="setFavoriteMovie($event)"
     />
   </div>
   <div class="controls">

@@ -14,15 +14,6 @@ test('increments value on click (NOT GREAT TEST)', async () => {
   expect(paragraph.text()).toBe('Times clicked: 2');
 });
 
-/**
- *
- *
- *
- *
- *
- *
- */
-
 test('increments value on click FIXED', async () => {
   const wrapper = mount(Counter);
 

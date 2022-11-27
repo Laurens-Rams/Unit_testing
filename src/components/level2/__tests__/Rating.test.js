@@ -3,10 +3,18 @@ import { mount } from '@vue/test-utils';
 import Ratings from '../Rating.vue';
 
 describe('Ratings.vue', () => {
+  const wrapper = mount(Ratings, {
+    props: {
+      score: 0,
+    },
+  });
+
   it('renders correctly', () => {
-    const wrapper = mount(Ratings);
     expect(wrapper.exists()).toBe(true);
   });
 
-  // TODO: how to test for prop score here?
+  it('prop score correctly', () => {
+    expect(wrapper.props().score).toBe(0);
+    expect(wrapper.text()).toContain(0);
+  });
 });

@@ -1,6 +1,3 @@
-/**
- * @author Alara Erzincan https://github.com/DevilsDomain
- */
 const MOON = '🌕';
 const HALF_MOON = '🌗';
 

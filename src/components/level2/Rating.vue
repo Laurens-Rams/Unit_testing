@@ -8,4 +8,5 @@ const viz = computed(() => getMoonScore(props.score));
 </script>
 <template>
   {{ viz }}
+  {{ props.score }}
 </template>

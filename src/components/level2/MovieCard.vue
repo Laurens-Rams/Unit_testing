@@ -4,6 +4,7 @@ import MoonRating from './Rating.vue';
 const props = defineProps(['movie', 'favoriteMovie']);
 const emit = defineEmits(['favorite-selected']);
 const favoriteMovieRef = toRef(props, 'favoriteMovie');
+
 const isFavorite = computed(
   {
     // getter
